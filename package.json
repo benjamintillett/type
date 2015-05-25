@@ -1,0 +1,26 @@
+{
+  "name": "type",
+  "version": "1.0.0",
+  "description": "A simple typing appliacation using express and test driven with jasmine",
+  "main": "app.js",
+  "scripts": {
+    "test": "\"./node_modules/.bin/jasmine-node spec\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:benjamintillett/type.git"
+  },
+  "keywords": [
+    "node",
+    "js",
+    "jasmine",
+    "express",
+    "typing"
+  ],
+  "author": "Ben Tillett",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/benjamintillett/type/issues"
+  },
+  "homepage": "https://github.com/benjamintillett/type"
+}
