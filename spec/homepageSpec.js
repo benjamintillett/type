@@ -18,7 +18,7 @@ describe("Hello world spec", function(){
 
 		it("returns status code 200",function(done){
 			request(base_url, function(error,response,body){
-				expect(response.statusCode).toEqual(201);
+				expect(response.statusCode).toEqual(200);
 				done();
 			});
 		});
