@@ -26,6 +26,7 @@
   "homepage": "https://github.com/benjamintillett/type",
   "dependencies": {
     "express": "^4.12.4",
+    "jade": "^1.10.0",
     "jasmine-node": "^1.14.5",
     "request": "^2.55.0",
     "stylus": "^0.51.1"
