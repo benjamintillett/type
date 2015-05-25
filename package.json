@@ -2,7 +2,7 @@
   "name": "type",
   "version": "1.0.0",
   "description": "A simple typing appliacation using express and test driven with jasmine",
-  "main": "app.js",
+  "main": "/app/app.js",
   "scripts": {
     "test": "./node_modules/.bin/jasmine-node spec --verbose"
   },
