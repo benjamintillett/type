@@ -8,7 +8,7 @@ describe("Hello world spec", function(){
 
 	describe("GET /", function(){
 		beforeEach(function() {
-	    	server = app.listen(app.get('port'), function() {
+	    	server = app.listen(3000, function() {
 			});
 	  	});
 		afterEach(function() {
