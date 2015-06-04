@@ -4,7 +4,7 @@
   "description": "A simple typing appliacation using express and test driven with jasmine",
   "main": "/app/app.js",
   "scripts": {
-    "test": "./node_modules/.bin/jasmine-node spec --verbose",
+    "test": "./node_modules/.bin/mocha --harmony",
     "start": "node ./bin/www"
   },
   "repository": {
@@ -25,10 +25,13 @@
   },
   "homepage": "https://github.com/benjamintillett/type",
   "dependencies": {
+    "chai": "^3.0.0",
     "express": "^4.12.4",
     "jade": "^1.10.0",
     "jasmine-node": "^1.14.5",
+    "mocha": "^2.2.5",
     "request": "^2.55.0",
-    "stylus": "^0.51.1"
+    "stylus": "^0.51.1",
+    "zombie": "^4.0.10"
   }
 }

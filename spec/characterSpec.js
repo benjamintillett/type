@@ -1,5 +1,6 @@
 var Character = require('../app/public/Character');
 
+
 describe("Character", function() {
   var character;
 
