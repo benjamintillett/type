@@ -1,6 +1,7 @@
-var Character = require('../../app/public/models/Character');
-var TextProcessor = require('../../app/public/models/TextProcessor');
-var Display = require('../../app/public/models/Display');
+var inTest = true;
+var Character = require('../../app/public/js/models/Character');
+var TextProcessor = require('../../app/public/js/models/TextProcessor');
+var Display = require('../../app/public/js/models/Display');
 var expect = require('chai').expect
 
 
@@ -35,8 +36,9 @@ describe("Display", function() {
     expect(display.activeChar.value).to.equal("i");
   });
 
-  // it("knows what the lastCharacterWas", function(){
-  //   expect(display.lastChar.value).toEqual(" ");
-  // });
+  it("knows what the lastCharacterWas", function(){
+    var display = new Display(characterArray,10);
+    expect(display.lastChar.value).to.equal(" ");
+  });
 
 });

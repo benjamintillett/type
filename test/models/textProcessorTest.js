@@ -1,5 +1,7 @@
-var TextProcessor = require('../../app/public/models/TextProcessor');
-var Character = require('../../app/public/models/Character');
+var inTest = true;
+
+var TextProcessor = require('../../app/public/js/models/TextProcessor');
+var Character = require('../../app/public/js/models/Character');
 var expect = require('chai').expect
 
 describe("TextProcessor", function() {

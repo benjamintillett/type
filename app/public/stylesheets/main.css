@@ -1,0 +1,40 @@
+body {
+  background-color: #000;
+  margin: 0px;
+}
+.text {
+  width: 80%;
+  height: 10%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  text-align: center;
+  background-color: #000;
+  color: #fff;
+  border: none;
+  margin: auto;
+  font-family: monaco;
+}
+.text p {
+  font-size: 30px;
+}
+.active {
+  background: #fff;
+  color: #000;
+}
+.green {
+  color: #0f0;
+}
+.red {
+  color: #f00;
+}
+ul li {
+  font-size: 50px;
+  display: inline-block;
+}
+pre {
+  font-size: 50px;
+}

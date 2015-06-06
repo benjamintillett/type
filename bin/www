@@ -2,3 +2,4 @@ var app = require('../app/app.js');
 
 app.listen(app.get('port'), function() {
 });
+console.log('listening on port:' + app.get('port'));

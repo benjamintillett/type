@@ -1,4 +1,5 @@
-var Character = require('../../app/public/models/Character');
+var inTest = true;
+var Character = require('../../app/public/js/models/Character');
 var expect = require('chai').expect
 
 
