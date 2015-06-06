@@ -31,7 +31,8 @@ describe("Display", function() {
   });
 
   it("knows what the active character is",function(){
-    expect(this.display.activeChar.value).toEqual("i");
+    var display = new Display(characterArray,10);
+    expect(display.activeChar.value).to.equal("i");
   });
 
   // it("knows what the lastCharacterWas", function(){
