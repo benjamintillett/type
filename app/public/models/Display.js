@@ -1,3 +1,5 @@
+var Character = require('./Character');
+
 function Display(characterArray,size){
 	this.characterArray = characterArray;
 	this.size 		= size;
@@ -24,14 +26,16 @@ Object.defineProperty(Display.prototype, "currentText", {
 	} 
 });
 
-Object.defineProperty(Display.prototype, "currentChar", { 
+Object.defineProperty(Display.prototype, "activeChar", { 
 	get: function () { 
 		return this.characterArray[Math.ceil(this.position + this.size/2)];
 	} 
 });
 
-Object.defineProperty(Display.prototype, "lastChar", { 
-	get: function () { 
-		return this.characterArray[Math.ceil(this.position + this.size/2) - 1];
-	} 
-});
+// Object.defineProperty(Display.prototype, "lastChar", { 
+// 	get: function () { 
+// 		return this.characterArray[Math.ceil(this.position + this.size/2) - 1];
+// 	} 
+// });
+
+module.exports = Display
