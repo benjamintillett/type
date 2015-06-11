@@ -1,7 +1,5 @@
-var Character = require('../app/public/Character');
-
-
 describe("Character", function() {
+
   var character;
 
   beforeEach(function() {
@@ -10,6 +8,10 @@ describe("Character", function() {
 
   it("Saves the value", function() {
     expect(character.value).toEqual("r");
+  });
+
+  it("Saves the class", function() {
+    expect(character.class).toEqual("white");
   });
 
 });
