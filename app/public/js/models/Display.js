@@ -1,7 +1,3 @@
-if (typeof module !== 'undefined' && typeof module.exports !== 'undefined')
-	var Character = require('./Character');
-
-
 function Display(characterArray,size){
 	this.characterArray = characterArray;
 	this.size 		= size;
@@ -38,7 +34,4 @@ Object.defineProperty(Display.prototype, "lastChar", {
 		return this.characterArray[Math.ceil(this.position + this.size/2) - 1];
 	} 
 });
-
-if (typeof module !== 'undefined' && typeof module.exports !== 'undefined')
-	module.exports = Display
 

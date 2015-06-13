@@ -25,10 +25,10 @@ body {
   background: #fff;
   color: #000;
 }
-.green {
+.success {
   color: #0f0;
 }
-.red {
+.fail {
   color: #f00;
 }
 ul li {
