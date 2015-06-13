@@ -1,22 +1,22 @@
 function Game(params){
 	this.display = params.display;
-	
+	this.inprogress = false;
 
 	this.checkInput = function(input){
 		activeChar = this.display.activeChar.value;
-		console.log(input);
-		console.log(activeChar);
 		return input === activeChar.charCodeAt()
 	}
 
 	this.failChar = function(){
 		this.display.activeChar.class = "fail"
+		console.log(this.display.activeChar.class);
 	}
 
 	this.succeedChar = function(){
 		this.display.activeChar.class = "success"
 	
 	}
+
 	this.processKeyInput = function(input){
 		if (this.checkInput(input) == true){
 			this.succeedChar();
@@ -24,5 +24,11 @@ function Game(params){
 			this.failChar();
 		}
 		this.display.shiftText();
+	}
+
+	this.start = function(){
+		this.inprogress = true;
+		this.display.activeChar.class = 'active';
+		console.log(this.display.activeChar.class);
 	}
 }

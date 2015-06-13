@@ -57,6 +57,7 @@ describe("Game", function() {
     });
 
 
+
     it('shifts the text, function',function(){
       game.processKeyInput(correctInput);
       expect(game.display.position).toEqual(1);
@@ -77,7 +78,13 @@ describe("Game", function() {
   describe('.start',function(){
     it('sets the active chars class to active',function(){
       game.start()
+      var activeChar = game.display.activeChar 
       expect(activeChar.class).toEqual('active');
+    });
+
+    it('set sets in progress to true', function(){
+      game.start();
+      expect(game.inprogress).toEqual(true);
     });
 
   });

@@ -5,6 +5,7 @@ function Display(characterArray,size){
 
 	this.shiftText = function() {
 		this.position += 1;
+		this.activeChar.class = 'active';
 	}	
 
 }
