@@ -4,38 +4,35 @@ var display   = new Display(charArray,25);
 var game      = new Game({display: display});
 var template = $('#letters').html();
 
+disableBackButton()
+
+
 $( document ).ready(function() {
 	
 	$(document).keypress(function(e) {
 
 		if (game.inprogress === true){
 			game.processKeyInput(e.which);
-			$('ul').html(renderText(template));
+			$('ul').html(game.renderText(template));
 		}
 		else { 
 			game.start();
 			$('#holding-text').remove();		
-			$('ul').html(renderText(template));
+			$('ul').html(game.renderText(template));
 		}
+	});
+
+	$( "#reset" ).click(function() {
+  		game.reset();
+  		$('ul').html(game.renderText(template));
 	});
 });
 
 
 
 
-
-
-
-
-
-
-
-function renderText(template){
-	var displayText = ""
-	for ( var i = 0; i < display.size; i++ )
-	{
-		var character = display.currentText[i];
-		displayText = displayText + Mustache.render(template,character);
-	}	
-	return displayText
-}	
+function disableBackButton(){
+	window.location.hash="";
+	window.location.hash="";
+	window.onhashchange=function(){window.location.hash="";}
+}

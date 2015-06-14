@@ -8,14 +8,24 @@ function Display(characterArray,size){
 		this.activeChar.class = 'active';
 	}	
 
-}
+	this.reset = function(){
+		this.position = 0
+		this.characterArray.forEach(function(character){
+			character.class = 'white';
+		});
+		this.activeChar.class = 'active';
+	}
 
-function buildCharacterArray(string){
-	characterArray = []
-	for ( var i = 0; i < string.length; i++ ){
-		characterArray.push(new Character(string[i]));
-	}	
-	return characterArray;
+	this.renderText = function(template){
+		var displayText = ""
+		for ( var i = 0; i < this.size; i++ )
+		{
+			var character = this.currentText[i];
+			displayText = displayText + Mustache.render(template,character);
+		}	
+		return displayText
+	}
+
 }
 
 Object.defineProperty(Display.prototype, "currentText", { 

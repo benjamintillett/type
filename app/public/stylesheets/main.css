@@ -1,6 +1,8 @@
 body {
   background-color: #000;
   margin: 0px;
+  font-family: monaco;
+  color: #fff;
 }
 .text {
   width: 80%;
@@ -13,10 +15,8 @@ body {
   margin: auto;
   text-align: center;
   background-color: #000;
-  color: #fff;
   border: none;
   margin: auto;
-  font-family: monaco;
 }
 .text p {
   font-size: 30px;
@@ -37,4 +37,33 @@ ul li {
 }
 pre {
   font-size: 50px;
+}
+.timer {
+  text-align: right;
+  position: fixed;
+  top: 0;
+  right: 0;
+}
+.reset {
+  text-align: left;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}
+.add {
+  text-align: right;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+}
+span {
+  font-size: 15px;
+}
+.icon {
+  margin: 25px;
+  text-align: center;
+  width: 100px;
+}
+.icon:hover {
+  font-size: 1.1em;
 }

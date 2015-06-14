@@ -4,5 +4,3 @@ function Character(value) {
 	this.class  	= "white"
 }
 
-if (typeof module !== 'undefined' && typeof module.exports !== 'undefined')
-	module.exports = Character

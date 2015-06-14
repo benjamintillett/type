@@ -56,8 +56,6 @@ describe("Game", function() {
       inCorrectInput = 22
     });
 
-
-
     it('shifts the text, function',function(){
       game.processKeyInput(correctInput);
       expect(game.display.position).toEqual(1);
@@ -89,6 +87,43 @@ describe("Game", function() {
 
   });
 
+  describe('.reset',function(){
+  
+  var displayDouble, game;
+
+    beforeEach(function() {
+      displayDouble = {
+      reset: function() {
+      },
+    };
+    game = new Game({display: displayDouble});
+    spyOn(game.display, 'reset');
+  });
+
+    it('resets the display',function(){
+      game.reset()
+      expect(displayDouble.reset).toHaveBeenCalled();
+    });    
+  })
+
+  describe('.reset',function(){
+  
+  var displayDouble, game;
+
+    beforeEach(function() {
+      displayDouble = {
+      renderText: function() {
+      },
+    };
+    game = new Game({display: displayDouble});
+    spyOn(game.display, 'renderText');
+  });
+
+    it('resets the display',function(){
+      game.renderText('template');
+      expect(displayDouble.renderText).toHaveBeenCalledWith('template');
+    });    
+  })
 
 });
 

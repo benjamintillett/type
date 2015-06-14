@@ -9,7 +9,6 @@ function Game(params){
 
 	this.failChar = function(){
 		this.display.activeChar.class = "fail"
-		console.log(this.display.activeChar.class);
 	}
 
 	this.succeedChar = function(){
@@ -29,6 +28,21 @@ function Game(params){
 	this.start = function(){
 		this.inprogress = true;
 		this.display.activeChar.class = 'active';
-		console.log(this.display.activeChar.class);
+	}
+
+	this.reset = function(){
+		this.display.reset();
+	}
+
+	this.renderText = function(template){
+		return this.display.renderText(template);
 	}
 }
+
+
+
+
+
+
+
+
