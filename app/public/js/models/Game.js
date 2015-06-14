@@ -17,6 +17,9 @@ function Game(params){
 	}
 
 	this.processKeyInput = function(input){
+		if(input == 8) { 
+			
+		}
 		if (this.checkInput(input) == true){
 			this.succeedChar();
 		} else {

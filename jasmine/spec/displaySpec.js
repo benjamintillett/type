@@ -28,6 +28,10 @@ describe("Display", function() {
 		expect(display.currentText[display.currentText.length-1].value).toEqual('e');
 	});
 
+	describe('.unshiftText'
+
+
+
 	it("knows what the active character is",function(){
 		var display = new Display(characterArray,10);
 		expect(display.activeChar.value).toEqual("i");

@@ -4,22 +4,14 @@ var display   = new Display(charArray,25);
 var game      = new Game({display: display});
 var template = $('#letters').html();
 
-disableBackButton()
+
 
 
 $( document ).ready(function() {
+
 	
 	$(document).keypress(function(e) {
-
-		if (game.inprogress === true){
-			game.processKeyInput(e.which);
-			$('ul').html(game.renderText(template));
-		}
-		else { 
-			game.start();
-			$('#holding-text').remove();		
-			$('ul').html(game.renderText(template));
-		}
+		keyInputController(e);
 	});
 
 	$( "#reset" ).click(function() {
@@ -29,10 +21,23 @@ $( document ).ready(function() {
 });
 
 
-
-
-function disableBackButton(){
-	window.location.hash="";
-	window.location.hash="";
-	window.onhashchange=function(){window.location.hash="";}
+function keyInputController(e){
+	if (game.inprogress === true){
+		game.processKeyInput(e.which);
+		$('ul').html(game.renderText(template));
+	}
+	else { 
+		game.start();
+		$('#holding-text').remove();		
+		$('ul').html(game.renderText(template));
+	}
 }
+
+
+
+$(document).on("keydown", function (e) {
+    if (e.which === 8 && !$(e.target).is("input, textarea")) {
+       	keyInputController(e);
+        e.preventDefault();
+    }
+});
