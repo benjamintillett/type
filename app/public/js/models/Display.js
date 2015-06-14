@@ -4,10 +4,19 @@ function Display(characterArray,size){
 	this.position	= 0 
 
 	this.shiftText = function() {
+		console.log('dfsafsd');
 		this.position += 1;
 		this.activeChar.class = 'active';
 	}	
 
+	this.unShiftText = function() {
+		this.activeChar.class = 'white';
+		console.log(this.position);
+		this.position -= 1;
+		this.activeChar.class = 'active';
+		console.log('hello');
+		console.log(this.position);
+	}	
 	this.reset = function(){
 		this.position = 0
 		this.characterArray.forEach(function(character){

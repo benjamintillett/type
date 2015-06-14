@@ -25,10 +25,26 @@ describe("Display", function() {
 	it(".shiftText moves the currentText 1 to the right", function(){
 		display.shiftText();
 		expect(display.currentText[0].value).toEqual('h');
-		expect(display.currentText[display.currentText.length-1].value).toEqual('e');
 	});
 
-	describe('.unshiftText'
+	describe('.unshiftText', function(){
+		it(".moves the currentText 1 to the left", function(){
+			display.shiftText();
+			display.unShiftText();
+			expect(display.currentText[0].value).toEqual('T');
+		});
+		it(".sets the old active chars class to white", function(){
+			display.shiftText();
+			oldActiveChar = display.activeChar;
+			display.unShiftText();
+			expect(oldActiveChar.class).toEqual('white');
+		});
+		it(".sets the new active chars class to active", function(){
+			display.shiftText();
+			display.unShiftText();
+			expect(display.activeChar.class).toEqual('active');
+		});
+	});
 
 
 

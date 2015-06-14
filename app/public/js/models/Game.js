@@ -16,16 +16,21 @@ function Game(params){
 	
 	}
 
+	this.backspace = function(){
+		this.display.unShiftText();
+	}
+
 	this.processKeyInput = function(input){
-		if(input == 8) { 
-			
+		if(input === 8) { 
+			this.backspace();		
 		}
-		if (this.checkInput(input) == true){
+		else if (this.checkInput(input) == true){
 			this.succeedChar();
+			this.display.shiftText();
 		} else {
 			this.failChar();
+			this.display.shiftText();
 		}
-		this.display.shiftText();
 	}
 
 	this.start = function(){
